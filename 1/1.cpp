@@ -26,6 +26,7 @@ int main()
 
     if (int q = 0; q < 12) {}
 
+    // Three-way comparision
     int a{}, c{};
     std::strong_ordering so = (a <=> c);
     if (so == std::strong_ordering::less) {}
