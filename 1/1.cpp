@@ -26,7 +26,7 @@ int main()
 
     if (int q = 0; q < 12) {}
 
-    // Three-way comparision
+    // Three-way comparision (<compare>)
     int a{}, c{};
     std::strong_ordering so = (a <=> c);
     if (so == std::strong_ordering::less) {}
@@ -54,6 +54,15 @@ int main()
 
     class2 instance_of_class2;
     instance_of_class2.class2method();
+
+    // auto + list initialization
+                                // Copy list initialization
+    auto var1 = {1, 3, 5};      // std::initializer_list
+    auto var2 = {1};            // std::initializer_list
+
+                                // Direct list initialization
+    //auto var3{1, 3, 5};       // Doesn't compile since c++17
+    auto var4{1};               // Single initializer since c++17 (int in this case)
 
     return 0;
 }
